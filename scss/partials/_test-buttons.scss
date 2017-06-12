@@ -1,0 +1,74 @@
+
+
+
+
+.choice-container { //test buttons container	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+		.choice {
+			margin:0;
+      text-align: center;
+		}
+}
+
+.choice { //labels for test buttons
+	width: 100%;		
+  padding-bottom: 1%;	
+	font-size: 20px;		
+	border-radius: 10px;
+	text-transform: uppercase;
+	color: white;
+}
+
+//this is for the JS states for the test buttons
+
+.box, .box2 {
+  margin: 10px;
+  width: calc(33.3% - 5%);  
+  background-color: $primaryColour;
+  }
+
+  .active, .active2{
+    margin: 10px;
+    width: calc(33.3% - 5%);  
+    background-color:aqua;     
+  }
+
+.choice-container .active, .choice-container .active2{
+  color: black; 
+}
+
+//test button effects
+
+label, .bubble, .border-background { //shadow effect
+  border-top: 1px solid rgba(255,255,255,0.8);
+  border-bottom: 1px solid rgba(0,0,0,0.1); 
+  box-shadow: inset rgba(255,254,255,0.6) 0 4px 4px, inset rgba(0,0,0,0.15) 0 -1px 4px, hsl(0, 0%, 40%) 0 1px 3px, hsl(39, 100%, 30%) 0 4px 1px, rgba(0,0,0,0.2) 0 8px 5px; 
+}
+
+
+label:hover {
+  cursor: pointer;
+  background-color: $secondaryColour;
+}
+
+
+//Portrait tablet and small desktops 
+@media (max-width: 980px) {
+   .choice { //labels for test buttons
+    font-size: 16px;    
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  footer {
+    margin-top: 2%;
+  }
+}
