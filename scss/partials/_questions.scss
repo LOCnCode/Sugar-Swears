@@ -1,0 +1,52 @@
+
+
+
+.swears-form-container {
+	width: 100%;
+}
+
+.sugarForm {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: center;
+}
+
+input {
+	visibility: hidden;
+	display: block;
+}
+
+.submit-container { //sweeten me
+	text-align: center;
+	margin: 5%;
+}
+
+.resultsPadding { //sweeten me results
+	text-align: center;
+	position: relative;
+	padding-bottom: 50px;
+}
+
+.choice-appears { //appended test results from JS
+	color: $tertiaryColour;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+//Portrait tablet and small desktops 
+@media (max-width: 940px) {
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
