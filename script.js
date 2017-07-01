@@ -24,7 +24,8 @@ var swears = {
 		family: [
 			"Cheese and Crackers!",
 			"Oh Fudge!",
-			"Sugar!"
+			"Sugar!",
+			"What the what!"
 		],
 		coWorkers: [
 			"Crapola!",
@@ -57,7 +58,8 @@ var swears = {
 		],
 		god: [
 			"Jumpin Jahosaphat!",
-			"Jeez Louise!"
+			"Jeez Louise!",
+			"Great Holy ghost!"
 		]
 	}  //level three object ends
 }; //SWEARS Object ENDS
@@ -109,14 +111,12 @@ $( function() {
 
 	function runSlots() {
 
-		// var updateSwear = butts;
-
 		var slotOne;
 		var slotTwo;
 		var slotThree;
 
 		var images = [
-			"images/lolly-turq.png", "images/redicecream.png", "images/donut-pinksprinkle.png", "images/cake-stripped.png"
+			"images/lolly-turq.png", /*"images/redicecream.png",*/ "images/donut-pinksprinkle.png", "images/cake-stripped.png"
 		];
 
 		slotOne = images[Math.floor(Math.random()*images.length)];

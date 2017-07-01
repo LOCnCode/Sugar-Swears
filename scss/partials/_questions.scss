@@ -1,15 +1,37 @@
 
+.choice-container { //test buttons container	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 
+		.choice {
+		width: 85%;
+    padding: 4% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+	}
+}
 
 .swears-form-container {
 	width: 100%;
 }
 
-.sugarForm {
+.questionsContainer {
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	align-content: center;
 	justify-content: center;
+}
+
+.panel {
+	width: 50%;
 }
 
 input {
@@ -17,9 +39,13 @@ input {
 	display: block;
 }
 
+.off-screen {
+	display: none;
+}
+
 .submit-container { //sweeten me
+	width: 100%;
 	text-align: center;
-	margin: 5%;
 }
 
 .resultsPadding { //sweeten me results
@@ -29,7 +55,9 @@ input {
 }
 
 .choice-appears { //appended test results from JS
-	color: $tertiaryColour;
+	font-size: 20px;
+	width: 100%;
+	color: white;
 	position: absolute;
 	bottom: 20px;
 	left: 50%;
@@ -39,14 +67,76 @@ input {
 //Portrait tablet and small desktops 
 @media (max-width: 940px) {
 
+	.results { //test buttons container	
+		.choice {
+			font-size: 25px;		
+		}
+	}
+
+	.choice-appears { //appended test results from JS
+		bottom: 0;
+	}
+
+	.resultsContainer {
+		.choice {
+			font-size: 28px;
+		}
+	}
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+	
+	.submit-container {
+		padding: 5% 0;
+	}
 
+	.resultsContainer {
+		.choice {
+			font-size: 28px;
+		}
+	}
+}
+
+@media (max-width: 585px) {
+	.choice-container { //test buttons container	
+		.choice {
+			font-size: 16px;		
+		}
+	}
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+	
+	.results { //test buttons container	
+		.choice {
+			font-size: 22px;		
+		}
+	}
+
+	.resultsContainer {
+		.choice {
+			font-size: 18px;
+		}
+	}
+}
+
+@media (max-width: 420px) {
+	.choice-container {
+    .choice {
+      width: 95%;
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 386px) {
+	
+	.resultsContainer {
+		.choice-appears {
+			font-size: 20px;
+		}
+	}
 
 }

@@ -1,0 +1,95 @@
+.choice-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .choice-container .choice {
+    margin: 4%;
+    text-align: center;
+    width: 85%;
+    padding-bottom: 1%;
+    font-size: 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: white; }
+
+.swears-form-container {
+  width: 100%; }
+
+.questionsContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.panel {
+  width: 50%; }
+
+input {
+  visibility: hidden;
+  display: block; }
+
+.submit-container {
+  width: 100%;
+  text-align: center; }
+
+.resultsPadding {
+  text-align: center;
+  position: relative;
+  padding-bottom: 50px; }
+
+.choice-appears {
+  font-size: 20px;
+  width: 100%;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+@media (max-width: 940px) {
+  .results .choice {
+    font-size: 25px; }
+  .choice-appears {
+    bottom: 0; }
+  .resultsContainer .choice {
+    font-size: 28px; } }
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .submit-container {
+    padding: 5% 0; } }
+
+@media (max-width: 585px) {
+  .choice-container .choice {
+    font-size: 16px; } }
+
+/* Landscape phones and down */

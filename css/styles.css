@@ -161,22 +161,7 @@ main {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: 10%; }
-
-h1, h2, h3 {
-  text-align: center;
-  font-family: 'Lemon', cursive; }
-
-h1, h2 {
-  color: white;
-  letter-spacing: 2px;
-  font-size: 20px;
-  text-shadow: 2px 2px hotpink; }
-
-h3 {
-  color: #584383;
-  font-size: 35px;
-  letter-spacing: 2px; }
+  margin-top: 3%; }
 
 header {
   width: 100%;
@@ -202,6 +187,21 @@ header {
     margin: 0 auto;
     margin-top: 2%; }
 
+h1, h2, h3 {
+  text-align: center;
+  font-family: 'Lemon', cursive; }
+
+h1, h2 {
+  color: white;
+  letter-spacing: 2px;
+  font-size: 20px;
+  text-shadow: 2px 2px hotpink; }
+
+h3 {
+  color: #584383;
+  font-size: 35px;
+  letter-spacing: 2px; }
+
 .logo-image {
   margin-top: 5%;
   text-align: center; }
@@ -218,16 +218,83 @@ footer {
     text-decoration: none;
     color: #584383; }
 
+@media (max-width: 940px) {
+  header h1 {
+    max-width: 90%; }
+  h3 {
+    font-size: 25px; }
+  .logo-image img {
+    width: 90%; }
+  footer {
+    margin: 6%; } }
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+  .wrapper {
+    width: 80%; }
   .logo-image img {
-    width: 90%; } }
+    width: 75%; }
+  header h1 {
+    max-width: 93%; } }
+
+@media (max-width: 655px) {
+  h3 {
+    font-size: 18px; } }
 
 /* Landscape phones and down */
+@media (max-width: 480px) {
+  .wrapper {
+    width: 90%; } }
+
+@media (max-width: 386px) {
+  header h1 {
+    font-size: 16px; }
+  h3 {
+    font-size: 12px; } }
+
+.choice-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .choice-container .choice {
+    width: 85%;
+    padding: 4% 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px; }
+
 .swears-form-container {
   width: 100%; }
 
-.sugarForm {
+.questionsContainer {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -245,13 +312,19 @@ footer {
   -ms-flex-pack: center;
   justify-content: center; }
 
+.panel {
+  width: 50%; }
+
 input {
   visibility: hidden;
   display: block; }
 
+.off-screen {
+  display: none; }
+
 .submit-container {
-  text-align: center;
-  margin: 5%; }
+  width: 100%;
+  text-align: center; }
 
 .resultsPadding {
   text-align: center;
@@ -259,6 +332,8 @@ input {
   padding-bottom: 50px; }
 
 .choice-appears {
+  font-size: 20px;
+  width: 100%;
   color: white;
   position: absolute;
   bottom: 20px;
@@ -267,16 +342,50 @@ input {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%); }
 
+@media (max-width: 940px) {
+  .results .choice {
+    font-size: 25px; }
+  .choice-appears {
+    bottom: 0; }
+  .resultsContainer .choice {
+    font-size: 28px; } }
+
 /* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .submit-container {
+    padding: 5% 0; }
+  .resultsContainer .choice {
+    font-size: 28px; } }
+
+@media (max-width: 585px) {
+  .choice-container .choice {
+    font-size: 16px; } }
+
 /* Landscape phones and down */
+@media (max-width: 480px) {
+  .results .choice {
+    font-size: 22px; }
+  .resultsContainer .choice {
+    font-size: 18px; } }
+
+@media (max-width: 420px) {
+  .choice-container .choice {
+    width: 95%;
+    font-size: 12px; } }
+
+@media (max-width: 386px) {
+  .resultsContainer .choice-appears {
+    font-size: 20px; } }
+
 button {
   background: none;
+  background-color: rgba(255, 255, 255, 0.75);
   border: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 1em;
   padding: 1em 2em;
-  width: 40%;
+  width: 50%;
   -webkit-box-shadow: inset 0 0 0 4px hotpink;
   box-shadow: inset 0 0 0 4px hotpink;
   color: hotpink;
@@ -327,37 +436,33 @@ button {
 
 .buttonContainer {
   text-align: center;
-  margin-bottom: 5%;
-  margin-top: 5%; }
+  margin: 5% 0; }
 
-.choice-container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around; }
-  .choice-container .choice {
-    margin: 0;
-    text-align: center; }
+@media (max-width: 940px) {
+  .buttonContainer {
+    margin: 5% 0; }
+  .go {
+    margin: 0; } }
 
-.choice {
-  width: 100%;
-  padding-bottom: 1%;
-  font-size: 20px;
-  border-radius: 10px;
-  text-transform: uppercase;
-  color: white; }
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .go {
+    margin-bottom: 5%; } }
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .buttonContainer {
+    margin: 5% 0 2% 0; } }
+
+@media (max-width: 420px) {
+  .wrapper {
+    width: 98%; }
+  button {
+    width: 70%; } }
 
 .box, .box2 {
   margin: 10px;
-  width: calc(33.3% - 5%);
+  width: 75%;
   background-color: mediumpurple; }
 
 .active, .active2 {

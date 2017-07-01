@@ -1,31 +1,9 @@
 
-
-
-
-.choice-container { //test buttons container	
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-		.choice {
-			margin:0;
-      text-align: center;
-		}
-}
-
-.choice { //labels for test buttons
-	width: 100%;		
-  padding-bottom: 1%;	
-	font-size: 20px;		
-	border-radius: 10px;
-	text-transform: uppercase;
-	color: white;
-}
-
 //this is for the JS states for the test buttons
 
 .box, .box2 {
   margin: 10px;
-  width: calc(33.3% - 5%);  
+  width: 75%;  
   background-color: $primaryColour;
   }
 
